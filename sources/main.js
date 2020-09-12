@@ -394,7 +394,7 @@ const VERSIONCATEGORY = '[[Category:v0.16.2]]';
 const BOTCATEGORY = '[[Category:Bot Templates]]';
 const TABLEREGEX = /{\| class="wikitable sortable"(.|\n)*?\|}/g;
 const ITEMTEMPLATEREGEX = /{{Item\|name=(.|\n)*?\|description=(.|\n)*?\|id=(.|\n)*?\|category=(.|\n)*?\|type=(.|\n)*?\|sellsfor=(.|\n)*?\|customData=(.|\n)*?\|itemSources=(.|\n)*?\|itemUses=(.|\n)*?}}/;
-const MONSTERTEMPLATEREGEX = /{{Monster\|name=(.|\n)*?\|monsterID=(.|\n)*?\|combatLevel=(.|\n)*?\|hitpoints=(.|\n)*?\|attackspeed=(.|\n)*?\|attacks=(.|\n)*?\|accuracyRating=(.|\n)*?\|meleeEvasionRating=(.|\n)*?\|rangedEvasionRating=(.|\n)*?\|magicEvasionRating=(.|\n)*?\|attackLevel=(.|\n)*?\|strengthLevel=(.|\n)*?\|defenceLevel=(.|\n)*?\|rangedLevel=(.|\n)*?\|magicLevel=(.|\n)*?\|zones=(.|\n)*?\|drops=(.|\n)*?}}/;
+const MONSTERTEMPLATEREGEX = /{{Monster\|name=(.|\n)*?\|monsterID=(.|\n)*?\|combatLevel=(.|\n)*?\|hitpoints=(.|\n)*?\|attackspeed=(.|\n)*?\|attacks=(.|\n)*?\|accuracyRating=(.|\n)*?\|meleeEvasionRating=(.|\n)*?\|rangedEvasionRating=(.|\n)*?\|magicEvasionRating=(.|\n)*?\|attackLevel=(.|\n)*?\|strengthLevel=(.|\n)*?\|defenceLevel=(.|\n)*?\|rangedLevel=(.|\n)*?\|magicLevel=(.|\n)*?\|zones=(.|\n)*?\|drops=(.|\n)*?}}<noinclude>StartDropsTable<\/noinclude>(.|\n)*?<noinclude>EndDropsTable<\/noinclude>/;
 const DUNGEONTEMPLATEREGEX = /{{Dungeon\|name=(.|\n)*?\|id=(.|\n)*?\|rewards=(.|\n)*?\|monsterList=(.|\n)*?}}/;
 const SLAYERAREATEMPLATEREGEX = /{{SlayerArea\|name=(.|\n)*?\|id=(.|\n)*?\|slayerLevel=(.|\n)*?\|slayerItem=(.|\n)*?\|monsterList=(.|\n)*?}}/;
 const COMBATAREATEMPLATEREGEX = /{{CombatArea\|name=(.|\n)*?\|id=(.|\n)*?\|monsterList=(.|\n)*?}}/;
