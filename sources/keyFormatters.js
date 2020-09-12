@@ -1130,7 +1130,7 @@ function formatMonsterLootChance(monsterID) {
  * @return {string}
  */
 function formatMonsterDrops(monsterID) {
-	let outputStr = "<noinclude>StartDropsTable</noinclude>";
+	let outputStr = "";
 	if (isMonsterDungeonOnly(monsterID)) {
 		if (MONSTERS[monsterID].isGodMonster) {
 			outputStr += "'''Always Drops:''' \n";
@@ -1183,7 +1183,6 @@ function formatMonsterDrops(monsterID) {
 		}
 		outputStr += `|}`;
 	}
-	outputStr = "<noinclude>EndDropsTable</noinclude>"
 	return outputStr;
 }
 
