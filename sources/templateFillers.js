@@ -21,9 +21,8 @@ function fillMonsterTemplate(monsterID) {
 	template += `|rangedLevel=${MONSTERS[monsterID].rangedLevel}`;
 	template += `|magicLevel=${MONSTERS[monsterID].magicLevel}`;
 	template += `|zones=${formatArrayAsNewlines(getMonsterLocationArray(monsterID))}`;
-	template += `|drops=`;
+	template += `|drops={{${MONSTERS[monsterID].name} Drops}}`;
 	template += "}}";
-	template += `${formatMonsterDrops(monsterID)}`;
 	return template;
 }
 

@@ -426,6 +426,18 @@ function createItemSourceTemplates() {
 }
 
 /**
+ * Callback for creating Monster Drop templates. Will overwrite existing pages.
+ */
+function createMonsterDropTemplates() {
+	if (wikiDataLoaded) {
+		// Create table templates
+		bulkCreateMonsterDropTemplates();
+	} else {
+		console.error("Wiki data is not loaded.");
+	}
+}
+
+/**
  * Callback for uploading all monster images
  */
 function uploadMonsterImages() {
@@ -727,8 +739,7 @@ async function updatePageTemplates(pageArray, pageNameKey, templateRegex, templa
 			const pullResult = await getFullWikiPage(pageName, 0);
 			if (pullResult.success) {
 				const oldItemPage = pullResult.text;
-				//let newItemPage = oldItemPage.replace(templateRegex, templateGenerator(i));
-				let newItemPage = pageGenerator(i);
+				let newItemPage = oldItemPage.replace(templateRegex, templateGenerator(i));
 				if (oldItemPage === newItemPage) {
 					newItemPage = oldItemPage.replace(OLDVERSIONREGEX, VERSIONTEMPLATE);
 					if (oldItemPage === newItemPage) {

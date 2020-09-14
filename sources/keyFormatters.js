@@ -449,7 +449,7 @@ function formatUpgradeImageLink(upgradeName, size, alignment) {
  * @return {string}
  */
 function formatAsShopCost(cost) {
-	return `[[File:Coins.svg|25px|middle]] ${cost}`;
+	return `{{GP|${cost}}}`;
 }
 
 /**
@@ -1140,7 +1140,6 @@ function formatMonsterDrops(monsterID) {
 			outputStr += "|-\n";
 			const boneQty = MONSTERS[monsterID].boneQty !== undefined ? MONSTERS[monsterID].boneQty : 1;
 			outputStr += `| ${formatItemIDAsImageLink(MONSTERS[monsterID].bones, 25, "middle")} || ${formatItemIDAsLink(MONSTERS[monsterID].bones)} || ${formatAsDropQty([boneQty, boneQty])} || 100% \n`;
-			//outputStr += `* ${formatItemIDAsImageLink(MONSTERS[monsterID].bones, 25, "middle")} ${formatAsDropQty([boneQty, boneQty])} ${formatItemIDAsLink(MONSTERS[monsterID].bones)}\n`;
 			outputStr += "|}";
 		} else {
 			outputStr += "None";
@@ -1155,7 +1154,6 @@ function formatMonsterDrops(monsterID) {
 			outputStr += `| ${formatItemIDAsImageLink(MONSTERS[monsterID].bones, 25, "middle")} || ${formatItemIDAsLink(MONSTERS[monsterID].bones)} || 1 || 100% \n`;
 			outputStr += "|}";
 		}
-		//outputStr += `'''${formatMonsterLootChance(monsterID)} chance for:''' \n`;
 		outputStr += `'''Can also drop:''' \n`;
 		outputStr += '{| class="wikitable"\n';
 		outputStr += "|-\n";
@@ -1174,9 +1172,6 @@ function formatMonsterDrops(monsterID) {
 			}
 			for (let i = 0; i < MONSTERS[monsterID].lootTable.length; i++) {
 				let percStr = (((100 * MONSTERS[monsterID].lootTable[i][1]) / tableWeight) * (getMonsterLootChance(monsterID) / 100)).toFixed(2);
-				if (percStr.length < 5) {
-					//percStr = `&nbsp;&nbsp;${percStr}`;
-				}
 				outputStr += "|-\n";
 				outputStr += `| ${formatItemIDAsImageLink(MONSTERS[monsterID].lootTable[i][0], 25, "middle")} || ${formatItemIDAsLink(MONSTERS[monsterID].lootTable[i][0])} || ${formatAsDropQty([1, MONSTERS[monsterID].lootTable[i][2]])} || ${percStr}% \n`;
 			}
